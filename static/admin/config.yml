@@ -21,8 +21,32 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Company", name: "company", widget: "string"}
       - {label: "Location", name: "location", widget: "string"}
-      - {label: "Start date", name: "startDate", widget: "date", format: "MMM YYYY"}
-      - {label: "End date", name: "endDate", widget: "date", format: "MMM YYYY"}
+      - {label: "Start date", name: "startDate", widget: "datetime", format: "MMM YYYY"}
+      - {label: "End date", name: "endDate", widget: "datetime", format: "MMM YYYY"}
+      - {label: "Description", name: "description", widget: "text"}
+
+  - name: "certificate"
+    label: "Certifications"
+    folder: "src/pages/certificate"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Organization", name: "organization", widget: "string"}
+      - {label: "Issue date", name: "issueDate", widget: "datetime", format: "MMM YYYY"}
+      - {label: "Expiry date", name: "expiryDate", widget: "datetime", format: "MMM YYYY"}
+      - {label: "Certificate ID", name: "certID", widget: "string"}
+      - {label: "Certificate URL", name: "certURL", widget: "string"}
+  
+  - name: "award"
+    label: "Awards"
+    folder: "src/pages/awards"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Organization", name: "organization", widget: "string"}
+      - {label: "Issue date", name: "issueDate", widget: "datetime", format: "MMM YYYY"}
       - {label: "Description", name: "description", widget: "text"}
 
   - name: "blog"
