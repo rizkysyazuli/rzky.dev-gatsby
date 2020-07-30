@@ -12,6 +12,19 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "experience"
+    label: "Experience"
+    folder: "src/pages/experience"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Company", name: "company", widget: "string"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Start date", name: "startDate", widget: "date", format: "MMM YYYY"}
+      - {label: "End date", name: "endDate", widget: "date", format: "MMM YYYY"}
+      - {label: "Description", name: "description", widget: "text"}
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
