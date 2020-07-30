@@ -24,6 +24,7 @@ collections:
       - {label: "Start date", name: "startDate", widget: "datetime", format: "MMM YYYY"}
       - {label: "End date", name: "endDate", widget: "datetime", format: "MMM YYYY"}
       - {label: "Description", name: "description", widget: "text"}
+      - {label: "Roles & Responsibility", name: "roles", widget: "text"}
 
   - name: "certificate"
     label: "Certifications"
@@ -38,7 +39,7 @@ collections:
       - {label: "Certificate ID", name: "certID", widget: "string"}
       - {label: "Certificate URL", name: "certURL", widget: "string"}
   
-  - name: "award"
+  - name: "awards"
     label: "Awards"
     folder: "src/pages/awards"
     create: true
@@ -48,6 +49,20 @@ collections:
       - {label: "Organization", name: "organization", widget: "string"}
       - {label: "Issue date", name: "issueDate", widget: "datetime", format: "MMM YYYY"}
       - {label: "Description", name: "description", widget: "text"}
+  
+  - name: "projects"
+    label: "Projects"
+    folder: "src/pages/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Associated with", name: "association", widget: "relation", collection: "experience", valueField: "experience.company", searchFields: "experience.company"}
+      - {label: "Start date", name: "startDate", widget: "datetime", format: "MMM YYYY"}
+      - {label: "End date", name: "endDate", widget: "datetime", format: "MMM YYYY"}
+      - {label: "Project URL", name: "url", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Images", name: "images", widget: "image", allow_multiple: true}
 
   - name: "blog"
     label: "Blog"
